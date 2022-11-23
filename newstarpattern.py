@@ -13,3 +13,5 @@ while i <= y:
     print(symbol)
     symbol += pattern2
     i += 1
+
+
