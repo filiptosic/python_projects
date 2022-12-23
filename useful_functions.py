@@ -23,8 +23,11 @@ def count_elements_nested(arr):
         count_dict = {}
         unnested = []
         for elements in arr:
-            for element in elements:
-                unnested.append(element)
+            if type(elements) == list:
+                for element in elements:
+                    unnested.append(element)
+            else:
+                unnested.append(elements)
         unique_elements = list(set(unnested))
         for each in unique_elements:
             count_dict[each] = 0
